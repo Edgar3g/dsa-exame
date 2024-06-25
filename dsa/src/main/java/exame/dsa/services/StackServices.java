@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StackServices {
 
-    private Stacks stackNode = new Stacks();
+    private final Stacks stackNode = new Stacks();
 
     public Stacks getStack() {
         return stackNode;
