@@ -14,7 +14,7 @@ public class Graphs {
 
     public void addEdge(int source, int destination) {
         adjacencyList.computeIfAbsent(source, k -> new ArrayList<>()).add(destination);
-        adjacencyList.computeIfAbsent(destination, k -> new ArrayList<>()).add(source); // Para grafos não direcionados
+        adjacencyList.computeIfAbsent(destination, k -> new ArrayList<>()).add(source);
     }
 
     public Map<Integer, List<Integer>> getAdjacencyList() {
