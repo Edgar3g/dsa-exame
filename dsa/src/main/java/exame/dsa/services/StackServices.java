@@ -1,4 +1,4 @@
 package exame.dsa.services;
 
-public class index {
+public class StackServices {
 }
