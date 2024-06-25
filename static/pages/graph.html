@@ -1,20 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grafo</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Algoritmo e Estruturas de Dados</title>
+   <link rel="stylesheet" href="../css/grafos.css">
 </head>
 <body>
-    <div class="container text-center mt-5">
-        <h1>Visualização do grafo</h1>
-        <svg width="800" height="600"></svg>
-        <button class="btn btn-primary mt-3" onclick="addNode()">Adicionar Node</button>
-        <button class="btn btn-danger mt-3" onclick="removeNode()">Remover Node</button>
+    <h1>Algoritmo e Estruturas de Dados</h1>
+    <div class="container">
+      
+     
+        <div class="section">
+            <div>
+                <label for="verticeInput">Vértice:</label>
+                <input type="text" id="verticeInput">
+                <button onclick="adicionarVertice()">Adicionar Vértice</button>
+            </div>
+            <div>
+                <label for="arestaOrigemInput">Origem:</label>
+                <input type="text" id="arestaOrigemInput">
+                <label for="arestaDestinoInput">Destino:</label>
+                <input type="text" id="arestaDestinoInput">
+                <button onclick="adicionarAresta()">Adicionar Aresta</button>
+            </div>
+            <svg width="800" height="600"></svg>
+            <div id="adjacencyList" class="adjacency-list">
+                <h2>Lista de Adjacências</h2>
+                <ul id="adjList"></ul>
+            </div>
+        </div>
     </div>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../js/graph.js"></script>
+
+
+
 </body>
+</html>
 </html>

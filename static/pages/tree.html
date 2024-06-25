@@ -10,12 +10,38 @@
 <body>
     <div class="container text-center mt-5">
         <h1>Visualização da Arvore Binária</h1>
-        <svg id="tree-svg" width="800" height="600"></svg>
-        <div class="form-group mt-3">
-            <input type="number" class="form-control" id="node-value" placeholder="Enter a number">
-        </div>
-        <button class="btn btn-primary mt-3" id="add-node-btn">Adicionar Node</button>
-        <button class="btn btn-danger mt-3" id="reset-btn">Resetar Arvore</button>
+        <div id="arvore">
+            <div class="arvoreConteiner">
+
+                <div class="dentro">
+            <div class="input col-12 pb-10">
+              <input type="number" class="form-control" id="entradaArvore" placeholder="Adicionar nó">
+              <input type="number" class="form-control" id="removerArvore" placeholder="Remover nó">
+             
+              
+            </div>
+  
+            <div class="button ">
+              <button class="btn" onclick="adicionarNoArvore()">Add</button>
+              <button class="btn" onclick="removerNoArvore()">Remove</button>
+              <button class="btn" onclick="mostrarPreOrdem()">Pré-ordem</button>
+              <button class="btn" onclick="mostrarEmOrdem()">Em-ordem</button>
+              <button class="btn" onclick="mostrarPosOrdem()">Pós-ordem</button>
+            </div>
+                </div>
+            
+
+                
+            <div class="container">
+              <div id="arvoreBinaria" class="arvore"></div>
+              <div id="resultadoArvore" style="color: #999; font-size: 20px;    text-align: center;"></div>
+            </div>
+          </div>
+            </div>
+  
+           
+        
+      </div>
     </div>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
