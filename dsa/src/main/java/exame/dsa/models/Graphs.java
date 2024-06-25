@@ -8,7 +8,7 @@ import java.util.Map;
 public class Graphs {
     private Map<Integer, List<Integer>> adjacencyList;
 
-    public void Graph() {
+    public Graphs() {
         this.adjacencyList = new HashMap<>();
     }
 

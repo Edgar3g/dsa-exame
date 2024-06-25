@@ -3,6 +3,9 @@ package exame.dsa.services;
 import exame.dsa.models.Graphs;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Map;
+
 @Service
 public class GraphServices {
     private Graphs graph = new Graphs();
@@ -17,9 +20,16 @@ public class GraphServices {
 
     public String printGraph() {
         StringBuilder sb = new StringBuilder();
-        graph.getAdjacencyList().forEach((key, value) -> {
-            sb.append(key).append(": ").append(value).append("\n");
-        });
+        Map<Integer, List<Integer>> adjacencyList = graph.getAdjacencyList();
+
+        if (adjacencyList != null) {
+            ((Map<?, ?>) adjacencyList).forEach((key, value) -> {
+                sb.append(key).append(": ").append(value).append("\n");
+            });
+        } else {
+            sb.append("No edges in the graph.");
+        }
+
         return sb.toString();
     }
 }
